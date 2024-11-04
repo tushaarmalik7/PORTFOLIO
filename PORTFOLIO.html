@@ -7,8 +7,7 @@
     <title>Tushaar Malik | Portfolio</title>
 </head>
     <style>
-        /* General Styles */
-body {
+        body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -21,16 +20,16 @@ h1, h2 {
 }
 
 .highlight {
-    color: #1e90ff;
+    color: #041d35;
 }
 
 a {
     text-decoration: none;
-    color: #1e90ff;
+    color: #051b30;
 }
 
 header {
-    background-color: #1e90ff;
+    background-color: #071f37;
     padding: 10px 0;
 }
 
@@ -49,9 +48,15 @@ nav ul li a {
     font-size: 18px;
 }
 
+/* Transform and hover effects */
 section {
     padding: 40px;
     text-align: center;
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: scale(1.02);
 }
 
 #home {
@@ -61,17 +66,24 @@ section {
 
 #home .btn {
     display: inline-block;
-    background-color: #1e90ff;
+    background-color: #07213a;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
     margin-top: 20px;
+    transition: transform 0.3s ease;
+}
+
+#home .btn:hover {
+    transform: scale(1.1);
+    background-color: #082136;
 }
 
 #about, #projects, #contact {
     background-color: white;
 }
 
+/* Pop-up effect for projects */
 .project {
     background-color: #f3f3f3;
     padding: 20px;
@@ -79,10 +91,19 @@ section {
     max-width: 600px;
     border-radius: 5px;
     box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
 }
 
 .project h3 {
     margin-bottom: 10px;
+}
+
+.project:hover {
+    opacity: 1;
+    transform: translateY(0);
+    box-shadow: 0px 6px 12px rgba(0,0,0,0.2);
 }
 
 form {
@@ -108,21 +129,38 @@ form button {
     display: block;
     width: 100%;
     padding: 10px;
-    background-color: #1e90ff;
+    background-color: #081e34;
     color: white;
     border: none;
     margin-top: 20px;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #082238;
 }
 
 footer {
-    background-color: #1e90ff;
+    background-color: #091f35;
     color: white;
     padding: 20px 0;
     text-align: center;
 }
 
+/* Pop-up effect for certificates */
+#achievements img {
+    width: 800px;
+    height: 800px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+#achievements img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
     </style>
 <body>
     <!-- Navigation -->
